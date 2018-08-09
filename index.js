@@ -25,7 +25,7 @@ program.version(pkg.version, '-v, --version');
  * Driver interface
  * -----------------------------------------------------------------------------
  */
-program.command('Driver <name>')
+program.command('Driver [name]')
     .description('Create, read, update, and delete drivers.')
     .option('-o, --overwrite [overwrite]', 'overwrite the driver record if it already exists.')
     .option('-r, --rename [rename]', 'rename a driver.')

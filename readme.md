@@ -41,10 +41,10 @@ There are two automated tests that evaluate error handing on input and calculati
 
 > New patterns can be added to the tests by editing the `~/test/data.json` file.
 
-### Manual Tests
+### Manual Testing
 Running the following command from the project root directory will run the manual test:
 ```
-$ npm test:manual
+$ npm run test:manual
 ```
 
 The manual test allows you to input a driver's name and validate if the driver has been added to the data store.
@@ -54,13 +54,51 @@ The manual test allows you to input a driver's name and validate if the driver h
 
 
 ## Usage
-There should now be a bin named: `cam`
+After installing, a local bin `cam` should now be available to use in the command-line.
 
+### Adding A Driver
 From the project root directory run:
 ```
-$ cam --help
+$ cam Driver Carl
 ```
 
+### Adding a Trip
+From the project root directory run:
+
+```
+$cam Trip Carl 16:22 18:22 110
+```
+
+> If the driver does not exists, it will be created.
+
+
+### Deleting A Driver
+```
+$ cam Driver Carl --delete
+```
+
+### Rename A Driver
+```
+$ cam Driver Carl --rename Karl
+```
+
+### List A Driver's Trips
+```
+$ cam Driver Carl --list
+```
+
+### List All Drivers
+```
+$ cam Driver --list
+```
+
+### Clear Driver Data
+```
+$ cam Driver Carl --overwrite
+```
+
+
+## Documentation
 ```
 Usage: cam [command] [options]
 
