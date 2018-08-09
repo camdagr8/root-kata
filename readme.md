@@ -126,6 +126,8 @@ Usage: cam [command] [options]
 
   Commands:
 
+    Seed [file]                           Populate the data store from file.
+    
     Driver <name> [options]               Create, read, update, and delete drivers.
       -o, --overwrite [overwrite]         overwrite the driver record if it already exists.
       -r, --rename [rename]               rename a driver.
