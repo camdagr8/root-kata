@@ -43,7 +43,7 @@ program.command('Trip <name> <start> <end> <distance>')
     .action(Trip.create);
 
 program.command('Report [name]')
-    .description('Get a report of speed and miles.')
+    .description('Get a report of speed and miles. Leaving the [name] blank will return a report for all Drivers.')
     .action(Trip.report);
 
 /**

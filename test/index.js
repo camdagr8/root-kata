@@ -5,28 +5,39 @@ const should = chai.should();
 const Calc   = require('../lib/calculate');
 const Driver = require('../lib/driver');
 const Trip   = require('../lib/trip');
+const _      = require('underscore');
 const prompt = require('prompt');
+const data   = require('./data.json');
 
 
 describe('Trip', function() {
     it ('Input validation', () => {
 
-        let name = 'Paul';
-        let start = '05:00';
-        let end = '06:00';
-        let distance = 60;
+        let input = data.input;
 
-        let validate = Trip.validate({ name, start, end, distance });
+        let errors = {
+            expected: _.pluck(input, 'error'),
+            actual: input.map((item) => Trip.validate(item).error)
+        };
 
-        validate.should.not.equal(false);
+        errors.expected.join(',').should.equal(errors.actual.join(','));
     });
 
     it ('Velocity calculation', () => {
-        let result = Calc.velocity({start: '00:00', end: '01:00', distance: 60});
 
-        let { speed, duration } = result;
+        let input = data.trips;
 
-        speed.should.equal(60);
-        duration.should.equal(1);
+        let speeds = {
+            expected: _.pluck(input, 'speed'),
+            actual: input.map((item) => Calc.velocity(item).speed)
+        };
+
+        let durations = {
+            expected: _.pluck(input, 'duration'),
+            actual: input.map((item) => Calc.velocity(item).duration)
+        };
+
+        speeds.expected.join(',').should.equal(speeds.actual.join(','));
+        durations.expected.join(',').should.equal(durations.actual.join(','));
     });
 });

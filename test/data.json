@@ -1,0 +1,73 @@
+{
+  "input": [
+  {
+    "name": "Paul",
+    "start": "5:00",
+    "end": "6:00",
+    "distance": 60,
+    "error": false
+  },
+  {
+    "name": "Steve",
+    "start": "6:00",
+    "end": "5:00",
+    "distance": 60,
+    "error": true
+  },
+  {
+    "start": "6:00",
+    "end": "5:00",
+    "distance": 60,
+    "error": true
+  },
+  {
+    "name": "Steve",
+    "end": "5:00",
+    "distance": 60,
+    "error": true
+  },
+  {
+    "name": "Steve",
+    "start": "6:00",
+    "distance": 60,
+    "error": true
+  },
+  {
+    "name": "Steve",
+    "start": "6:00",
+    "end": "5:00",
+    "error": true
+  },
+  {
+    "error": true
+  }],
+  "trips": [
+  {
+    "start": "00:00",
+    "end": "01:00",
+    "distance": 60,
+    "speed": 60,
+    "duration": 1
+  },
+  {
+    "start": "07:15",
+    "end": "07:45",
+    "distance": "17.3",
+    "speed": 34,
+    "duration": 0.5
+  },
+  {
+    "start": "6:12",
+    "end": "6:32",
+    "distance": "21.8",
+    "speed": 66,
+    "duration": 0.3333333333333333
+  },
+  {
+    "start": "12:01",
+    "end": "13:16",
+    "distance": "42.0",
+    "speed": 34,
+    "duration": 1.25
+  }]
+}
