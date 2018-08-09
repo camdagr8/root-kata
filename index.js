@@ -9,6 +9,7 @@
 const pkg     = require('./package.json');
 const Driver  = require('./lib/driver');
 const Trip    = require('./lib/trip');
+const Seed    = require('./lib/seed');
 const program = require('commander');
 
 
@@ -19,6 +20,15 @@ const program = require('commander');
  * -----------------------------------------------------------------------------
  */
 program.version(pkg.version, '-v, --version');
+
+/**
+ * -----------------------------------------------------------------------------
+ * Seed interface
+ * -----------------------------------------------------------------------------
+ */
+program.command('Seed [file]')
+    .description('Populate the data store from file.')
+    .action(Seed.init);
 
 /**
  * -----------------------------------------------------------------------------

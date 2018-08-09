@@ -39,7 +39,7 @@ $ npm test
 
 There are two automated tests that evaluate error handing on input and calculation of velocity and duration.
 
-> New patterns can be added to the tests by editing the `~/test/data.json` file.
+> _New patterns can be added to the tests by editing the `~/test/data.json` file._
 
 ### Manual Testing
 Running the following command from the project root directory will run the manual test:
@@ -49,12 +49,29 @@ $ npm run test:manual
 
 The manual test allows you to input a driver's name and validate if the driver has been added to the data store.
 
-> When you run the manual test, you will be prompted to enter the driver's name.
+> _When you run the manual test, you will be prompted to enter the driver's name._
 
 
 
 ## Usage
 After installing, a local bin `cam` should now be available to use in the command-line.
+
+### Adding Data from File
+Assuming the following file format:
+```
+Driver Dan
+Driver Alex
+Driver Bob
+Trip Dan 07:15 07:45 17.3
+Trip Dan 06:12 06:32 21.8
+Trip Alex 12:01 13:16 42.0
+```
+You can import drivers and trips into the data store:
+```
+$ cam Seed /path/to/file
+```
+
+> _Omitting the file path will load the default `~/store/import.txt` file._
 
 ### Adding A Driver
 From the project root directory run:
@@ -69,7 +86,7 @@ From the project root directory run:
 $cam Trip Carl 16:22 18:22 110
 ```
 
-> If the driver does not exists, it will be created.
+> _If the driver does not exists, it will be created._
 
 
 ### Deleting A Driver
