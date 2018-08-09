@@ -1,0 +1,24 @@
+{
+    "dan": [{
+        "start": "07:15",
+        "end": "07:45",
+        "distance": "17.3",
+        "speed": 34,
+        "duration": 0.5
+    }, {
+        "start": "06:12",
+        "end": "06:32",
+        "distance": "21.8",
+        "speed": 66,
+        "duration": 0.3333333333333333
+    }],
+    "alex": [{
+        "start": "12:01",
+        "end": "13:16",
+        "distance": "42.0",
+        "speed": 34,
+        "duration": 1.25
+    }],
+    "bob": [],
+    "bill": []
+}

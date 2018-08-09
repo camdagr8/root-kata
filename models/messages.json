@@ -1,0 +1,15 @@
+{
+  "success": {
+    "1": "driver %s",
+    "2": "trip %s"
+  },
+  "error": {
+    "1": "driver %s already exists. Specify the --overwrite flag to replace the entry.",
+    "2": "driver `name` is a required parameter",
+    "3": "driver %s not found",
+    "4": "invalid start time: %s",
+    "5": "invalid end time: %s",
+    "6": "invalid distance: %s",
+    "7": "end time must be after start time"
+  }
+}
